@@ -32,6 +32,7 @@ There are two way to create the services.
 ## FYI
 * You can add shortcut key for those two services via macOS to make more easily.
 * You can custom destination directory of **ZIP With Path** via edit variable **destDir**.
+* I never test it lower than High Sierra.
 * You may find script not elegant itself, because I never code any shell script before, and I bought my first mac month ago. I look forward to any suggestion or fork.
 
 ## License
