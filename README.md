@@ -27,6 +27,7 @@ There are two way to create the services.
 ## Usage
 1. Select files or directories in Finder, open conetxt menu and select Service > **ZIP** (or **ZIP with path**).
 2. That's all !
+![context menu](https://github.com/pilisir/macOSzip/blob/master/doc/image/contextmenu.png)
 
 ## FYI
 * You can add shortcut key for those two services via macOS to make more easily.
