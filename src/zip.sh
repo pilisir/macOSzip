@@ -4,18 +4,20 @@
 
 zipFileName=""
 eachFileName=""
-destDir="/Documents/"
-cd $HOME
+zipFileDir=""
 for eachItemPath in "$@" 
 do
+	eachFileName=`basename "$eachItemPath"` 
 	if [ -z $zipFileName ]; then
-		zipFileName=`basename "$eachItemPath"` 
+		zipFileName=$eachFileName
 	fi
-	eachFileName=${eachItemPath/$HOME\//""}
-	$
-	if [[ ($eachItemPath =~ "$HOME$destDir") && (${eachItemPath:0:7} = \/Users\/) ]]; then
-		cd $HOME$destDir
-		eachFileName=${eachFileName/${destDir:1:${#destDir}-1}/""}
+	if [ -d $eachItemPath ]; then
+		zipFileDir=$eachItemPath
+		cd $zipFileDir
+		cd ../
+	else
+		zipFileDir=`dirname "$eachItemPath"` 
+		cd $zipFileDir
 	fi
-	zip -r "$HOME$destDir$zipFileName.zip" "$eachFileName" -x "*/\__MACOSX" -x "*/\.*"
+	zip -r "$zipFileName.zip" "$eachFileName" -x "*/\__MACOSX" -x "*/\.*"
 done
