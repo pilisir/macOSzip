@@ -5,7 +5,7 @@ Do your own easy way to compress files or directories as a clean zip with simple
 ## Feature
 * Zip files or directories without any **hidden** or **garbage** file.
 e.g. .DS_Store, __MACOSX . 
-* Zip files or directories with the **full path** beginning under ~/, known as *username*, to the ~/Documents directory.
+* Zip files or directories with the **full parent path** beginning under ~/, known as *username*, to the ~/Documents directory.
 ## Install
 There are two way to create the services.
 ##### Way 1: Copy and Paste
