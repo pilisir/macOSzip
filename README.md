@@ -38,3 +38,6 @@ There are two way to create the services.
 
 ## License
 MIT License
+
+## Donate
+[Donate me via PayPal](https://www.paypal.me/pilisir/0.99usd)
