@@ -41,3 +41,4 @@ MIT License
 
 ## Donate
 [Donate me via PayPal](https://www.paypal.me/pilisir/0.99usd)
+[Donate me via OPay(歐付寶)](https://p.opay.tw/unUun)
