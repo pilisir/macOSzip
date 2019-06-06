@@ -1,16 +1,18 @@
 # macOS zip service
 
-Do your own easy way to compress files or directories as a clean zip with simple services on macOS Finder.
+Do your own easy way to compress files or folders as a clean zip with simple services on macOS Finder.
+
+[中文版](https://github.com/pilisir/macOSzip/wiki/%E4%B8%AD%E6%96%87%E7%89%88-README)
 
 ## Feature
-* Zip files or directories without any **hidden** or **garbage** file.
+* Zip files or folders without any **hidden** or **garbage** file.
 e.g. .DS_Store, __MACOSX . 
-* Zip files or directories with the **full parent path** beginning under ~/, known as *username*, to the ~/Documents directory.
+* Zip files or folders with the **full parent path** beginning under ~/, known as *username*, to the ~/Documents directory.
 ## Install
 There are two way to create the services.
 ##### Way 1: Copy and Paste
 1. Directly download this project and uncompress it.
-2. Move two service files to the local service folder. You can easily move directory __*Library*__ under __*./dest/*__ of this project to your local __*$USER*__ directory.  (Please set your Finder eanble to see hidden directories via shortcut key **[Shift] + [Command] + [.]**  first.)
+2. Move two service files to the local service folder. You can easily copy *ZIP.workflow* and *ZIP with path.workflow* under directory __*./dist/Library/Services/*__ of this project to your local __*$USER/Library/Services/*__ directory.
 3. Done !
 ##### Way 2: Create services yourself.
 1. Open **Automator** app.
@@ -29,12 +31,16 @@ There are two way to create the services.
 2. That's all !
 ![context menu](https://github.com/pilisir/macOSzip/blob/master/doc/image/contextmenu.png)
 
+## Recommend Setting Hot Key
+* You can assign shortcut key for services via Keyboard in System Preferences to make more easily.
+* Recommend **[Control] + [Command] + [z]**, meaning as **Zip** and **[Control] + [Command] + [p]**, meaning as **zip with full parent Path**.
+* [Tutorial](https://apple.stackexchange.com/questions/43998/how-do-i-assign-a-keyboard-shortcut-to-a-service-in-os-x)
+
 ## FYI
-* You can add shortcut key for those two services via macOS to make more easily.
-* **ZIP with path** would ignore path, /Documents, if files or directories are already under ~/Documents.
+* **ZIP with path** would ignore path, /Documents, if files or folders are already under ~/Documents.
 * You can custom destination directory of **ZIP with path** via edit the variable **destDir**.
 * I never test it lower than High Sierra.
-* You may find script not elegant itself, because I never code any shell script before, and I bought my first mac a month ago. I look forward to any suggestion or fork.
+* You may find out the script not elegant itself, because I never code any shell script before, and I bought my first mac a month ago. I look forward to any suggestion or fork.
 
 ## License
 MIT License
