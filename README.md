@@ -27,13 +27,13 @@ There are two way to create the services.
 10. To create second Service, **ZIP With Path**, just repeat Way 2 and change to copy content text from __*./src/zip_with_path.sh*__.
 
 ## Usage
-1. Select files or directories in Finder, open conetxt menu and select Service > **ZIP** (or **ZIP with path**).
+1. Select files or folders in Finder, open conetxt menu and select Service > **ZIP** (or **ZIP with path**).
 2. That's all !
 ![context menu](https://github.com/pilisir/macOSzip/blob/master/doc/image/contextmenu.png)
 
 ## Recommend Setting Hot Key
 * You can assign shortcut key for services via Keyboard in System Preferences to make more easily.
-* Recommend **[Control] + [Command] + [z]**, meaning as **Zip** and **[Control] + [Command] + [p]**, meaning as **zip with full parent Path**.
+* Recommend **[Control] + [Command] + [Z]**, meaning as **Zip** and **[Control] + [Command] + [P]**, meaning as **zip with full parent Path**.
 * [Tutorial](https://apple.stackexchange.com/questions/43998/how-do-i-assign-a-keyboard-shortcut-to-a-service-in-os-x)
 
 ## FYI
