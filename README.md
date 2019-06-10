@@ -10,11 +10,11 @@ e.g. .DS_Store, __MACOSX .
 * Zip files or folders with the **full parent path** beginning under ~/, known as *username*, to the ~/Documents directory.
 ## Install
 There are two way to create the services.
-##### Way 1: Copy and Paste
+##### Way 1: Copy and Paste (If you run into a problem about encoding of workflow file while trying this way, please try Way 2 instead.)
 1. Directly download this project and uncompress it.
 2. Move two service files to the local service folder. You can easily copy *ZIP.workflow* and *ZIP with path.workflow* under directory __*./dist/Library/Services/*__ of this project to your local __*$USER/Library/Services/*__ directory.
 3. Done !
-##### Way 2: Create services yourself.
+##### Way 2: Create services yourself. 
 1. Open **Automator** app.
 2. Press **[Command] + [N]** to new a document which type is *Service*.
 3. Select __*Action > Library > Files & Folders > Get Selected Finder Items*__ and drag it to the right side as Step One.
