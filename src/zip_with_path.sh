@@ -1,4 +1,4 @@
-# Version 1.1
+# Version 1.2
 # Copyright (c) 2019 pilisir.tw@gmail.com
 # Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to check license terms.
 
@@ -6,7 +6,7 @@ zipFileName=""
 eachFileName=""
 destDir="/Documents/"
 cd $HOME
-for eachItemPath in "$@" 
+while read -r eachItemPath;
 do
 	if [ -z $zipFileName ]; then
 		zipFileName=`basename "$eachItemPath"` 

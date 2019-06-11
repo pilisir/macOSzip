@@ -128,7 +128,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string># Version 1.1
+					<string># Version 1.2
 # Copyright (c) 2019 pilisir.tw@gmail.com
 # Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to check license terms.
 
@@ -140,10 +140,10 @@ escapePath() {
 zipFileName=""
 eachFileName=""
 zipFileDir=""
-for eachItemPath in "$@" 
+while read -r eachItemPath;
 do
-	eachItemPathEscape=$(escapePath $eachItemPath)
-	eachFileName=$(basename $eachItemPathEscape) 
+	eachItemPathEscape=$(escapePath "$eachItemPath")
+	eachFileName=$(basename "$eachItemPathEscape")
 	if [ -z $zipFileName ]; then
 		zipFileName=$eachFileName
 	fi
@@ -153,7 +153,7 @@ do
 		eval $cmd
 		cd ../
 	else
-		zipFileDir=$(dirname $eachItemPathEscape) 
+		zipFileDir=$(dirname "$eachItemPathEscape") 
 		cmd="cd $zipFileDir"
 		eval $cmd
 	fi
@@ -163,7 +163,7 @@ done</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
-					<integer>1</integer>
+					<integer>0</integer>
 					<key>shell</key>
 					<string>/bin/bash</string>
 					<key>source</key>
@@ -282,7 +282,7 @@ done</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>47EDCCE0-C380-414C-AEF7-50CC6970D085</key>
+		<key>533FD888-2CE0-43EE-B4CB-A552FDFD97AD</key>
 		<dict>
 			<key>from</key>
 			<string>6458A634-C6EA-41C1-AC48-48C7C6769975 - 6458A634-C6EA-41C1-AC48-48C7C6769975</string>

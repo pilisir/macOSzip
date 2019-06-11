@@ -1,4 +1,4 @@
-# Version 1.1
+# Version 1.2
 # Copyright (c) 2019 pilisir.tw@gmail.com
 # Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to check license terms.
 
@@ -10,10 +10,10 @@ escapePath() {
 zipFileName=""
 eachFileName=""
 zipFileDir=""
-for eachItemPath in "$@" 
+while read -r eachItemPath;
 do
-	eachItemPathEscape=$(escapePath $eachItemPath)
-	eachFileName=$(basename $eachItemPathEscape) 
+	eachItemPathEscape=$(escapePath "$eachItemPath")
+	eachFileName=$(basename "$eachItemPathEscape")
 	if [ -z $zipFileName ]; then
 		zipFileName=$eachFileName
 	fi
@@ -23,7 +23,7 @@ do
 		eval $cmd
 		cd ../
 	else
-		zipFileDir=$(dirname $eachItemPathEscape) 
+		zipFileDir=$(dirname "$eachItemPathEscape") 
 		cmd="cd $zipFileDir"
 		eval $cmd
 	fi
