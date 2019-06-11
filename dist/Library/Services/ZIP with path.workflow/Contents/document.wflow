@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>444.7</string>
+	<string>444.42</string>
 	<key>AMApplicationVersion</key>
-	<string>2.8</string>
+	<string>2.9</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -128,7 +128,8 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string># Copyright (c) 2018 pilisir.tw@gmail.com
+					<string># Version 1.1
+# Copyright (c) 2019 pilisir.tw@gmail.com
 # Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to check license terms.
 
 zipFileName=""
@@ -141,12 +142,11 @@ do
 		zipFileName=`basename "$eachItemPath"` 
 	fi
 	eachFileName=${eachItemPath/$HOME\//""}
-	$
 	if [[ ($eachItemPath =~ "$HOME$destDir") &amp;&amp; (${eachItemPath:0:7} = \/Users\/) ]]; then
 		cd $HOME$destDir
 		eachFileName=${eachFileName/${destDir:1:${#destDir}-1}/""}
 	fi
-	zip -r "$HOME$destDir$zipFileName.zip" "$eachFileName" -x "*/\__MACOSX" -x "*/\.*"
+	zip -r "$HOME$destDir$zipFileName.zip" "$eachFileName" -x "*/\__MACOSX" -x "*.DS_Store"
 done</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -260,9 +260,9 @@ done</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:499.000000</string>
+				<string>452.750000:550.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/zh_TW.lproj/main.nib</string>
+				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -270,7 +270,7 @@ done</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>CFA18E21-E363-4300-ABCD-A096F493B809</key>
+		<key>A7F0B583-5191-42E8-BFA4-6AD41F538DD5</key>
 		<dict>
 			<key>from</key>
 			<string>CB9A31CF-3E64-4186-A173-35A23C38A180 - CB9A31CF-3E64-4186-A173-35A23C38A180</string>
@@ -280,11 +280,27 @@ done</string>
 	</dict>
 	<key>workflowMetaData</key>
 	<dict>
+		<key>applicationBundleIDsByPath</key>
+		<dict/>
+		<key>applicationPaths</key>
+		<array/>
+		<key>inputTypeIdentifier</key>
+		<string>com.apple.Automator.fileSystemObject</string>
+		<key>outputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>presentationMode</key>
+		<integer>15</integer>
+		<key>processesInput</key>
+		<integer>0</integer>
 		<key>serviceInputTypeIdentifier</key>
 		<string>com.apple.Automator.fileSystemObject</string>
 		<key>serviceOutputTypeIdentifier</key>
 		<string>com.apple.Automator.nothing</string>
 		<key>serviceProcessesInput</key>
+		<integer>0</integer>
+		<key>systemImageName</key>
+		<string>NSActionTemplate</string>
+		<key>useAutomaticInputType</key>
 		<integer>0</integer>
 		<key>workflowTypeIdentifier</key>
 		<string>com.apple.Automator.servicesMenu</string>

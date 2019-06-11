@@ -5,14 +5,13 @@ Do your own easy way to compress files or folders as a clean zip with simple ser
 [中文版](https://github.com/pilisir/macOSzip/wiki/%E4%B8%AD%E6%96%87%E7%89%88-README)
 
 ## Feature
-* Zip files or folders without any **hidden** or **garbage** file.
-e.g. .DS_Store, __MACOSX . 
-* Zip files or folders with the **full parent path** beginning under ~/, known as *username*, to the ~/Documents directory.
+* Zip files or folders without any **.DS_Store** and **__MACOSX** file.
+* Zip files or folders with the **full parent path** beginning under ~/, known as *username*, to the ~/Documents folder.
 ## Install
 There are two way to create the services.
 ##### Way 1: Copy and Paste (If you run into a problem about encoding of workflow file while trying this way, please try Way 2 instead.)
 1. Directly download this project and uncompress it.
-2. Move two service files to the local service folder. You can easily copy *ZIP.workflow* and *ZIP with path.workflow* under directory __*./dist/Library/Services/*__ of this project to your local __*$USER/Library/Services/*__ directory.
+2. Move two service files to the local service folder. You can easily copy *ZIP.workflow* and *ZIP with path.workflow* under folder __*./dist/Library/Services/*__ of this project to your local __*$USER/Library/Services/*__ folder.
 3. Done !
 ##### Way 2: Create services yourself. 
 1. Open **Automator** app.
@@ -38,7 +37,7 @@ There are two way to create the services.
 
 ## FYI
 * **ZIP with path** would ignore path, /Documents, if files or folders are already under ~/Documents.
-* You can custom destination directory of **ZIP with path** via edit the variable **destDir**.
+* You can custom destination folder of **ZIP with path** via edit the variable **destDir**.
 * I never test it lower than High Sierra.
 * You may find out the script not elegant itself, because I never code any shell script before, and I bought my first mac a month ago. I look forward to any suggestion or fork.
 

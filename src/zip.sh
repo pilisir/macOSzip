@@ -1,23 +1,32 @@
-# Version 0.1
-# Copyright (c) 2018 pilisir.tw@gmail.com
+# Version 1.1
+# Copyright (c) 2019 pilisir.tw@gmail.com
 # Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to check license terms.
+
+escapePath() {
+	resultValue=$(echo "$@" | sed 's@[\]@\\\\@g;s/"/\\"/g;s/\ /\\ /g;s/'"'"'/\'"\'"'/g;s/`/\\`/g;s/:/\\:/g;s/?/\\?/g;s/!/\\!/g;s/</\\</g;s/>/\\>/g;s/|/\\|/g;s/*/\\*/g;s/(/\\(/g;s/)/\\)/g;s/\[/\\[/g;s/\]/\\]/g;s/{/\\{/g;s/}/\\}/g;s/&/\\&/g;s/%/\\%/g;s/\$/\\$/g;s/#/\\#/g;s/~/\\~/g;s/=/\\=/g;s/,/\\,/g;s@[;]@\\;@g;')
+	echo $resultValue
+}
 
 zipFileName=""
 eachFileName=""
 zipFileDir=""
 for eachItemPath in "$@" 
 do
-	eachFileName=`basename "$eachItemPath"` 
+	eachItemPathEscape=$(escapePath $eachItemPath)
+	eachFileName=$(basename $eachItemPathEscape) 
 	if [ -z $zipFileName ]; then
 		zipFileName=$eachFileName
 	fi
 	if [ -d $eachItemPath ]; then
-		zipFileDir=$eachItemPath
-		cd $zipFileDir
+		zipFileDir=$eachItemPathEscape
+		cmd="cd $zipFileDir"
+		eval $cmd
 		cd ../
 	else
-		zipFileDir=`dirname "$eachItemPath"` 
-		cd $zipFileDir
+		zipFileDir=$(dirname $eachItemPathEscape) 
+		cmd="cd $zipFileDir"
+		eval $cmd
 	fi
-	zip -r "$zipFileName.zip" "$eachFileName" -x "*/\__MACOSX" -x "*/\.*"
+	cmd="zip -x */\__MACOSX -x *.DS_Store -r ./$zipFileName.zip -- $eachFileName"
+	eval $cmd
 done
