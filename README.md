@@ -10,8 +10,8 @@ Do your own easy way to compress files or folders as a clean zip with simple ser
 ## Install
 There are two way to create the services.
 ##### Way 1: Copy and Paste (If you run into a problem about encoding of workflow file while trying this way, please try Way 2 instead.)
-1. Directly download this project and uncompress it.
-2. Move two service files to the local service folder. You can easily copy *ZIP.workflow* and *ZIP with path.workflow* under folder __*./dist/Library/Services/*__ of this project to your local __*$USER/Library/Services/*__ folder.
+1. Directly [download](https://github.com/pilisir/macOSzip/releases/latest/download/macOSzip.zip) the latest release and uncompress it.
+2. Move those two service files to the local service folder. You can easily copy *ZIP.workflow* and *ZIP with path.workflow* to your local __*$USER/Library/Services/*__ directory. (Please set your Finder to be able to see hidden directories via shortcut key **[Shift] + [Command] + [.]**  first.)
 3. Done !
 ##### Way 2: Create services yourself. 
 1. Open **Automator** app.
@@ -30,8 +30,8 @@ There are two way to create the services.
 2. That's all !
 ![context menu](https://github.com/pilisir/macOSzip/blob/master/doc/image/contextmenu.png)
 
-## Recommend Setting Hot Key
-* You can assign shortcut key for services via Keyboard in System Preferences to make more easily.
+## Recommend to set Shortcut Key
+* You can assign shortcut key for services via Keyboard in System Preferences to make things more easily.
 * Recommend **[Control] + [Command] + [Z]**, meaning as **Zip** and **[Control] + [Command] + [P]**, meaning as **zip with full parent Path**.
 * [Tutorial](https://apple.stackexchange.com/questions/43998/how-do-i-assign-a-keyboard-shortcut-to-a-service-in-os-x)
 
@@ -44,6 +44,8 @@ There are two way to create the services.
 ## License
 MIT License
 
-## Donate
+## Encourage
+* Star this project if you like !
+* Or you can donate me via\
 [Donate me via PayPal](https://www.paypal.me/pilisir/0.99usd)\
 [Donate me via OPay(歐付寶)](https://p.opay.tw/unUun)
