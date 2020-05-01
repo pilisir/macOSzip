@@ -134,6 +134,7 @@ body {
 
 .mz-anime-files .mz-anime-file {
     margin: 0 12px;
+    padding: 0 5px;
 }
 
 .mz-anime-zip {
@@ -364,5 +365,11 @@ ul {
         line-height: 2vw;
         padding-top: 60px;
         margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .mz-anime-zip img {
+        max-width: 135px;
     }
 }
